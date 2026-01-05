@@ -1,4 +1,3 @@
-[intro.html](https://github.com/user-attachments/files/24430502/intro.html)
 <!DOCTYPE html>
 <html lang="ko">
 <head>
