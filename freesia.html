@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>프리지아처럼 새로운 시작을 응원해</title>
+
+  <style>
+    @font-face {
+      font-family: 'Cafe24Surround';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+      font-weight: normal;
+      font-display: swap;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif;
+      line-height: 1.8;
+      color: #222;
+    }
+
+     /* ===== 섹션 공통 ===== */
+    .section {
+      min-height: 100vh;
+      padding: 60px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero-section {
+      background:
+        linear-gradient(rgba(255,255,255,0.82), rgba(255,255,255,0.82)),
+        url('freesia.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero {
+      font-family: 'Cafe24Surround', sans-serif;
+      font-size: 30px;
+      animation: fadeUp 1.8s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .meaning-section { background-color: #fff3f7; }
+    .cheer-section { background-color: #f6fff3; }
+    .family-section { background-color: #fffdf6; }
+    .music-section { background-color: #fff9e6; }
+
+    .title {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .text {
+      font-size: 17px;
+      max-width: 420px;
+    }
+
+    .flower {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+
+    /* ===== 가족 편지 ===== */
+    .envelopes {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px 14px;
+      margin: 24px 0 32px;
+      max-width: 420px;
+      width: 100%;
+    }
+
+    .envelope {
+      background: #ffffff;
+      border: 1px solid #e7e2d6;
+      border-radius: 24px;
+      padding: 10px 0;
+      font-size: 14.5px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .envelope:hover {
+      background: #f7f4ec;
+    }
+
+    .family-envelope {
+      background: #ffffff;
+      border: 1px solid #e7e2d6;
+      border-radius: 24px;
+      padding: 10px 0;
+      font-size: 14.5px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .family-envelope:hover {
+      background: #f7f4ec;
+    }
+
+    .letter-box {
+      width: 100%;
+      max-width: 420px;
+    }
+
+    .letter {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 26px 22px;
+      font-size: 15.5px;
+      line-height: 1.9;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      margin-top: 18px;
+      display: none;
+      animation: openLetter 0.45s ease forwards;
+    }
+
+    @keyframes openLetter {
+      from { opacity: 0; transform: translateY(-6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== 음악 ===== */
+    .music-list {
+      margin-top: 32px;
+      width: 100%;
+      max-width: 420px;
+    }
+
+    .music-item {
+      margin-bottom: 26px;
+    }
+
+    .music-item a {
+      display: inline-block;
+      color: #222;
+      font-size: 1.05rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: opacity 0.25s ease;
+    }
+
+    .music-item a:hover {
+      opacity: 0.75;
+      text-decoration: underline;
+    }
+
+    .music-end {
+      margin-top: 36px;
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- 첫 화면 -->
+<section class="section hero-section">
+  <div class="hero">
+    프리지아처럼<br>새로운 시작을 응원해
+  </div>
+</section>
+
+<!-- 꽃 의미 -->
+<section class="section meaning-section">
+  <div class="flower">🌼</div>
+  <div class="text">
+    프리지아의 꽃말은<br>
+    <strong>순수, 우정, 새로운 시작</strong>.<br><br>
+    봄의 시작에 가장 먼저 피어나<br>
+    늘 희망을 먼저 건네는 꽃이래.
+  </div>
+</section>
+
+<!-- 응원 문구 -->
+<section class="section cheer-section">
+  <div class="flower">🤍</div>
+  <div class="text">
+    네가 어떤 선택을 하든,<br>
+    어떤 속도로 가든,<br>
+    지금의 시작이<br>
+    분명 너만의 봄이 되길 바라.
+  </div>
+</section>
+
+<section class="section family-section">
+  <div class="flower">💌</div>
+  <div class="title">가족의 편지</div>
+
+  <div class="envelopes">
+    <button class="envelope" onclick="toggleLetter('mom')">✉️ 엄마</button>
+    <button class="envelope" onclick="toggleLetter('dad')">✉️ 아빠</button>
+
+    <button class="envelope" onclick="toggleLetter('aunt')">✉️ 이모</button>
+    <button class="envelope" onclick="toggleLetter('uncle')">✉️ 아부</button>
+
+    <button class="envelope" onclick="toggleLetter('brother')">✉️ 할아버지, 할머니</button>
+    <button class="envelope" onclick="toggleLetter('sister')">✉️ 누나</button>
+  </div>
+
+  <div class="letter-box">
+    <div id="mom" class="letter">엄마 편지 내용</div>
+    <div id="dad" class="letter">아빠 편지 내용</div>
+    <div id="aunt" class="letter">이모 편지 내용</div>
+    <div id="uncle" class="letter">
+    아덜, 축하한다
+    </div>
+    <div id="brother" class="letter">
+      우리 정우 벌써 중학교 졸업식 한다네<br>
+      건강하게 졸업하니 대견하다<br>
+      고등학생때도 지금처럼 건강하게<br>
+      학교 다니길 바란다<br>
+      우리 정우 할아버지 할머니가<br>
+      사랑해 고마워
+    </div>
+    <div id="sister" class="letter">
+    항상 나에게 맞춰줘서 정말 고마워.<br>
+    쓸데없는 욕심, 말도 안되는 고집에도<br>
+    언제나 어른스럽게 대해줘서 고마워.<br>
+    정말 누가 어른인지 모르겠네ㅋㅋ<br><br>
+
+    항상 웃고 있다고 해서 행복한 것은 아니야.<br>
+    내가 가장 잘 알면서도 외면하고 있었던 것 같아.<br>
+    조금이라도 힘들면 꼭 얘기해줘.<br>
+    많은 도움이 되지는 못하겠지만,<br>
+    너만큼은 아프지 않았으면 좋겠어.<br>
+    진심이야.<br><br>
+
+    너가 얼마나 대단한 사람인지<br>
+    스스로는 잘 모를지도 몰라.<br>
+    그래도 괜찮아.<br>
+    지금까지 그래왔던 것처럼<br>
+    분명 또 한 걸음 나아갈 거야.<br><br>
+
+    이 꽃처럼<br>
+    조용히, 먼저 피어나서<br>
+    누군가의 계절이 되어줄 거라고 믿어.<br><br>
+
+    오늘도, 그리고 앞으로도<br>
+    너의 모든 시작을 응원할게.<br>
+    </div>
+  </div>
+</section>
+
+<section class="section music-section">
+  <div class="flower">💿</div>
+  <div class="title">이 꽃다발을 만들며 떠올린 노래</div>
+
+    <div class="music-list">
+      <div class="music-item">
+        <a href="https://www.youtube.com/watch?v=aFcAYMyCkBw&list=RDaFcAYMyCkBw&start_radio=1" target="_blank">
+          🎵 볼빨간사춘기 – 프리지아
+        </a>
+      </div>
+
+      <div class="music-item">
+        <a href="https://www.youtube.com/watch?v=nzDO6tAB6ng&list=RDnzDO6tAB6ng&start_radio=1" target="_blank">
+          🎵 정은지 – 하늘바라기
+        </a>
+      </div>
+    </div>
+
+    <p class="music-end">
+      이 노래들이 오늘의 시작을 조금 더 따뜻하게 해주길.
+    </p>
+</section>
+</main>
+
+<script>
+  function toggleLetter(id) {
+    const letters = document.querySelectorAll('.letter');
+    letters.forEach(letter => {
+      letter.style.display = (letter.id === id && letter.style.display !== 'block')
+        ? 'block'
+        : 'none';
+    });
+  }
+
+</script>
+
+</body>
+</html>
+
+</body>
+</html>
